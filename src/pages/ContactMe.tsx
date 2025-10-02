@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './ContactMe.css';
-import profilePic from '../images/sumanth.jpeg';
 import { FaEnvelope, FaPhoneAlt, FaCoffee, FaLinkedin } from 'react-icons/fa';
 import { ContactMe as IContactMe } from '../types';
 import { getContactMe } from '../queries/getContactMe';
@@ -23,7 +22,20 @@ const ContactMe: React.FC = () => {
   return (
     <div className="contact-container">
       <div className="linkedin-badge-custom">
-        <img src={profilePic} alt="Sumanth Samala" className="badge-avatar" />
+        <img
+          src={userData.profilePicture.url || (process.env.PUBLIC_URL + '/images/profile.jpg')}
+          onError={(e: any) => {
+            e.currentTarget.onerror = null;
+            try {
+              const local = require('../images/profile.jpg');
+              e.currentTarget.src = local.default || local;
+            } catch (_) {
+              e.currentTarget.src = process.env.PUBLIC_URL + '/logo192.png';
+            }
+          }}
+          alt={userData.name}
+          className="badge-avatar"
+        />
         <div className="badge-content">
           <h3 className="badge-name">{userData?.name}</h3>
           <p className="badge-title">{userData.title}</p>
@@ -41,9 +53,10 @@ const ContactMe: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="contact-header">
+      {/* <div className="contact-header">
         <p>I'm always up for a chat or a coffee! Feel free to reach out.</p>
-      </div>
+      </div> */}
+      <br />
       <div className="contact-details">
         <div className="contact-item">
           <FaEnvelope className="contact-icon" />
@@ -56,10 +69,6 @@ const ContactMe: React.FC = () => {
           <a href={`tel:${userData.phoneNumber}`} className="contact-link">
             {userData.phoneNumber}
           </a>
-        </div>
-        <div className="contact-fun">
-          <p>Or catch up over a coffee ☕</p>
-          <FaCoffee className="coffee-icon" />
         </div>
       </div>
     </div>

@@ -83,7 +83,24 @@ const Projects: React.FC = () => {
             className="project-card"
             style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
           >
-            <img src={project.image.url} alt={project.title} className="project-image" />
+            <img
+              src={
+                project.image.url.startsWith('http')
+                  ? project.image.url
+                  : (process.env.PUBLIC_URL + '/images/' + project.image.url)
+              }
+              onError={(e: any) => {
+                e.currentTarget.onerror = null;
+                try {
+                  const local = require(`../images/${project.image.url}`);
+                  e.currentTarget.src = local.default || local;
+                } catch (_) {
+                  e.currentTarget.src = process.env.PUBLIC_URL + '/logo192.png';
+                }
+              }}
+              alt={project.title}
+              className="project-image"
+            />
             <div className="project-details">
               <h3>{project.title}</h3>
               <p>{project.description}</p>

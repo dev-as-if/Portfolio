@@ -1,5 +1,5 @@
 .contact-container {
-  padding: 100px 20px;
+  padding: 7rem 1.1rem;
   background-color: #141414;
   color: #e6e6e6;
   text-align: center;
@@ -21,8 +21,8 @@
 }
 
 .badge-avatar {
-  width: 60px;
-  height: 60px;
+  width: 11rem;
+  height: 14rem;
   border-radius: 50%;
   margin-right: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -71,6 +71,7 @@
 
 .badge-link:hover {
   background-color: #005983;
+
 }
 
 .linkedin-icon {

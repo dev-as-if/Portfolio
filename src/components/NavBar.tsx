@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'; // Import icons
 import './Navbar.css';
 import netflixLogo from '../images/logo-2.png';
-import blueImage from '../images/blue.png';
+import blueImage from '../images/blue.jpg';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -41,6 +41,10 @@ const Navbar: React.FC = () => {
             <li><Link to="/work-experience">Professional</Link></li>
             <li><Link to="/skills">Skills</Link></li>
             <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/development">Development</Link></li>
+            <li><Link to="/competitive-coding">Competitive</Link></li>
+            <li><Link to="/resume">Resume</Link></li>
+            <li><Link to="/certifications">Certifications</Link></li>
             <li><Link to="/contact-me">Hire Me</Link></li>
           </ul>
         </div>
@@ -68,6 +72,10 @@ const Navbar: React.FC = () => {
           <li><Link to="/work-experience" onClick={closeSidebar}><FaBriefcase /> Professional</Link></li>
           <li><Link to="/skills" onClick={closeSidebar}><FaTools /> Skills</Link></li>
           <li><Link to="/projects" onClick={closeSidebar}><FaProjectDiagram /> Projects</Link></li>
+          <li><Link to="/development" onClick={closeSidebar}><FaProjectDiagram /> Development</Link></li>
+          <li><Link to="/competitive-coding" onClick={closeSidebar}><FaProjectDiagram /> Competitive</Link></li>
+          <li><Link to="/resume" onClick={closeSidebar}><FaProjectDiagram /> Resume</Link></li>
+          <li><Link to="/certifications" onClick={closeSidebar}><FaProjectDiagram /> Certifications</Link></li>
           <li><Link to="/contact-me" onClick={closeSidebar}><FaEnvelope /> Hire Me</Link></li>
         </ul>
       </div>
