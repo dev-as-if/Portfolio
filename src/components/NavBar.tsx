@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'; // Import icons
+import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 import './Navbar.css';
-import netflixLogo from '../images/logo-2.png';
 import blueImage from '../images/blue.jpg';
 
 const Navbar: React.FC = () => {
@@ -10,7 +9,10 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
   const profileImage = location.state?.profileImage || blueImage;
+  const fullName = 'ASIF ALAM';
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 80);
@@ -19,6 +21,22 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Typewriting effect
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullName.length) {
+        setDisplayedText(fullName.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        setIsTypingComplete(true);
+        clearInterval(typingInterval);
+      }
+    }, 150); // Typing speed: 150ms per character
+
+    return () => clearInterval(typingInterval);
   }, []);
 
   const toggleSidebar = () => {
@@ -33,8 +51,11 @@ const Navbar: React.FC = () => {
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-left">
-          <Link to="/" className="navbar-logo">
-            <img src={netflixLogo} alt="Netflix" />
+          <Link to="/" className="navbar-logo-text">
+            <span className="typewriter-text">
+              {displayedText}
+              {!isTypingComplete && <span className="cursor-blink">|</span>}
+            </span>
           </Link>
           <ul className="navbar-links">
             <li><Link to="/browse">Home</Link></li>
@@ -65,7 +86,7 @@ const Navbar: React.FC = () => {
       {/* Sidebar (only visible on mobile) */}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-logo">
-          <img src={netflixLogo} alt="Netflix Logo" />
+          <span className="sidebar-name">ASIF ALAM</span>
         </div>
         <ul>
           <li><Link to="/browse" onClick={closeSidebar}><FaHome /> Home</Link></li>

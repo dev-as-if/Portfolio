@@ -1,15 +1,161 @@
-.skills-container {
-  padding: 40px;
-  text-align: center;
-  color: #fff;
-  max-width: 1000px;
-  margin: auto;
+.skills-page {
+  width: 100%;
+  background: #141414;
+  min-height: 100vh;
 }
 
-.skills-title {
-  font-size: 2.5rem;
-  color: #e50914; /* Netflix red */
-  margin-bottom: 30px;
+/* Hero Section with Auto-Scrolling Logos */
+.skills-hero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(180deg, #000 0%, #141414 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 10;
+  margin-bottom: 60px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #e50914 0%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrolling Container */
+.scrolling-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.scroll-layer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 40px;
+  padding: 10px 0;
+  flex-shrink: 0;
+}
+
+/* Scroll Right Animation */
+.scroll-right .scroll-content {
+  animation: scrollRight 40s linear infinite;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* Scroll Left Animation */
+.scroll-left .scroll-content {
+  animation: scrollLeft 40s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Skill Logo Item */
+.skill-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 25px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.skill-logo-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--skill-color, #e50914);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
+}
+
+.skill-logo-icon {
+  font-size: 3rem;
+  color: var(--skill-color, #fff);
+  transition: all 0.3s ease;
+}
+
+.skill-logo-item:hover .skill-logo-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px var(--skill-color));
+}
+
+.skill-logo-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Existing Skills Container */
+.skills-container {
+  padding: 80px 40px;
+  text-align: center;
+  color: #fff;
+  max-width: 1200px;
+  margin: auto;
+  background: #141414;
 }
 
 .skills-grid {
@@ -108,6 +254,85 @@
 @keyframes fadeSlideIn {
   to {
     opacity: 1;
-    transform: translateY(10);
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .skill-logo-item {
+    min-width: 120px;
+    padding: 20px 25px;
+  }
+  
+  .skill-logo-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .skills-hero {
+    min-height: 60vh;
+    padding: 40px 15px;
+  }
+  
+  .scroll-content {
+    gap: 25px;
+  }
+  
+  .skill-logo-item {
+    min-width: 100px;
+    padding: 15px 20px;
+  }
+  
+  .skill-logo-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-logo-name {
+    font-size: 0.8rem;
+  }
+  
+  .skills-container {
+    padding: 60px 20px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .scrolling-container {
+    gap: 20px;
+  }
+  
+  .skill-logo-item {
+    min-width: 80px;
+    padding: 12px 15px;
+  }
+  
+  .skill-logo-icon {
+    font-size: 1.5rem;
   }
 }

@@ -8,7 +8,7 @@ const blogs = blogsData;
 const Blogs: React.FC = () => {
   return (
     <div className="blogs-container">
-      <h2 className="blogs-title">✍️ My Blog Posts</h2>
+      <h2 className="blogs-title">My Blog Posts</h2>
       <p className="blogs-intro">A collection of my thoughts and tutorials on software development.</p>
       <div className="blogs-grid">
         {blogs.map((blog, index) => (

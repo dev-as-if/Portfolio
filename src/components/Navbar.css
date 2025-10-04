@@ -24,11 +24,68 @@
   align-items: center;
 }
 
-.navbar-logo img {
-  height: 30px;
-  margin-right: 30px;
+/* Typewriter Logo Styling */
+.navbar-logo-text {
+  text-decoration: none;
+  margin-right: 40px;
   margin-left: 10px;
-  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.typewriter-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #e50914 0%, #ff6b6b 50%, #e50914 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.4));
+  transition: all 0.3s ease;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Blinking cursor */
+.cursor-blink {
+  color: #e50914;
+  font-weight: 300;
+  animation: blink 0.8s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hover effect for the name */
+.navbar-logo-text:hover .typewriter-text {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 20px rgba(229, 9, 20, 0.8));
+  transition: all 0.3s ease;
 }
 
 /* Navbar Links */
@@ -70,9 +127,13 @@
 
 /* Mobile-specific styling */
 @media (max-width: 768px) {
-  .navbar-logo img {
-    height: 20px;
+  .navbar-logo-text {
     margin-right: auto;
+  }
+  
+  .typewriter-text {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
   }
   .profile-icon {
     width: 24px;
@@ -137,9 +198,18 @@
     transform: translateX(0);
   }
 
-  .sidebar-logo img {
-    height: 30px;
-    margin-bottom: 20px;
+  .sidebar-logo {
+    margin-bottom: 30px;
+  }
+
+  .sidebar-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #e50914 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .sidebar ul {
