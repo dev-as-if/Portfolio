@@ -13,7 +13,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, image, onClick }) => {
       <div className="image-container">
         <img src={image} alt={`${name} profile`} className="profile-image" />
       </div>
-      <h3 className="profile-name">{name}</h3>
+      <h3 className="browse-profile-name">{name}</h3>
     </div>
   );
 };

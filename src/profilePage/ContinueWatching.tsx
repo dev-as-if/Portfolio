@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ContinueWatching.css';
+import Grey from '../images/grey.jpg';
+import Daredevil2 from '../images/daredevil2.jpeg';
+import MindHunter from '../images/mindhunter.jpg';
+import MoneyHeist from '../images/moneyheist.jpg';
+import PeakyBlinders from '../images/peakyblinder.jpg';
+import Dark from '../images/dark.jpg';
+import Witcher from '../images/witcher.jpg';
+import StrangerThings from '../images/strangerthings.jpeg';
 
 type ProfileType = 'recruiter' | 'developer' | 'student' | 'adventurer';
 
@@ -10,22 +18,25 @@ interface ContinueWatchingProps {
 
 const continueWatchingConfig = {
   recruiter: [
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+    { title: "Certifications", imgSrc: `${MindHunter}`, link: "/certifications" },
+    { title: "Blogs", imgSrc: `${Dark}`, link: "/blogs" },
+    { title: "Contact Me", imgSrc: `${PeakyBlinders}`, link: "/contact-me" }
   ],
   developer: [
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Certifications", imgSrc: "https://picsum.photos/id/1028/300/200", link: "/certifications" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+    { title: "Development", imgSrc: `${Witcher}`, link: "/development" },
+    { title: "Skills", imgSrc: `${Daredevil2}`, link: "/certifications" },
+    { title: "Project", imgSrc: `${MoneyHeist}`, link: "/contact-me" },
+    { title: "Blogs", imgSrc: `${StrangerThings}`, link: "/blogs" },
   ],
   student: [
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+    { title: "Skills", imgSrc: `${Daredevil2}`, link: "/certifications" },
+    { title: "Blogs", imgSrc: `${Grey}`, link: "/blogs" },
+    { title: "Contact Me", imgSrc: `${PeakyBlinders}`, link: "/contact-me" }
   ],
   adventurer: [
-    { title: "Certifications", imgSrc: "https://picsum.photos/id/1028/300/200", link: "/certifications" },
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+    { title: "Certifications", imgSrc: `${MindHunter}`, link: "/certifications" },
+    { title: "Blogs", imgSrc: `${Witcher}`, link: "/blogs" },
+    { title: "Contact Me", imgSrc: `${PeakyBlinders}`, link: "/contact-me" }
   ]
 };
 

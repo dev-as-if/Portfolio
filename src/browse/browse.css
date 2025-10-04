@@ -5,14 +5,17 @@
   align-items: center;
   height: 100vh;
   background-color: #141414;
+  padding: 20px;
 }
 
 .who-is-watching {
   color: #fff;
-    font-size: 3.5vw;
-    font-weight: unset;
-    width: 100%;
-    text-align: center;
+  font-size: 3.5vw;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
 }
 
 .profiles {
@@ -21,11 +24,66 @@
   flex-wrap: wrap;
   margin-bottom: 10rem;
   justify-content: center;
+  align-items: center;
 }
 
+@media (max-width: 1200px) {
+  .who-is-watching {
+    font-size: 3.2vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .who-is-watching {
+    font-size: 3vw;
+  }
+  
+  .profiles {
+    gap: 15px;
+  }
+}
 
 @media (max-width: 768px) {
+  .browse-container {
+    padding: 15px;
+  }
+  
   .who-is-watching {
-    font-size: 30px;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+  
+  .profiles {
+    gap: 12px;
+    margin-bottom: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .browse-container {
+    padding: 10px;
+  }
+  
+  .who-is-watching {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  
+  .profiles {
+    gap: 10px;
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .who-is-watching {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .profiles {
+    gap: 8px;
+    margin-bottom: 5rem;
   }
 }

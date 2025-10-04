@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Projects.css';
 import './CompetitiveCoding.css';
-import { FaCode } from 'react-icons/fa';
+import { FaCode, FaTrophy, FaMedal } from 'react-icons/fa';
+import { SiLeetcode, SiCodechef, SiCodeforces, SiGeeksforgeeks } from 'react-icons/si';
 import socialProfiles from '../data/social';
 
 const CompetitiveCoding: React.FC = () => {
@@ -22,40 +23,78 @@ const CompetitiveCoding: React.FC = () => {
     socialProfiles.hackerrankProfile && { label: 'HackerRank', href: socialProfiles.hackerrankProfile },
   ].filter(Boolean) as { label: string; href: string }[];
 
-  const logo = (label: string) => {
+  const getIcon = (label: string) => {
     switch (label) {
       case 'LeetCode':
-        return 'https://assets.leetcode.com/static_assets/public/icons/favicon-192x192.png';
+        return <SiLeetcode />;
       case 'GeeksforGeeks':
-        return 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png';
+        return <SiGeeksforgeeks />;
       case 'HackerRank':
-        return 'https://files.prepinsta.com/wp-content/uploads/2025/03/what-is-hackerrank-platform.webp';
+        return <FaCode />;
       case 'Codeforces':
-        return 'https://sta.codeforces.com/s/72481/images/codeforces-logo-with-telegram.png';
+        return <SiCodeforces />;
       case 'CodeChef':
-        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/CodeChef_Logo.svg/1200px-CodeChef_Logo.svg.png';
+        return <SiCodechef />;
       default:
-        return '';
+        return <FaCode />;
+    }
+  };
+
+  const getColor = (label: string) => {
+    switch (label) {
+      case 'LeetCode':
+        return '#FFA116';
+      case 'GeeksforGeeks':
+        return '#2F8D46';
+      case 'HackerRank':
+        return '#00EA64';
+      case 'Codeforces':
+        return '#1F8ACB';
+      case 'CodeChef':
+        return '#5B4638';
+      default:
+        return '#e50914';
     }
   };
 
   return (
-    <div className="projects-container">
+    <div className="competitive-container">
+      <div className="competitive-header">
+        <h1 className="competitive-title"><FaTrophy /> Competitive Programming</h1>
+        <p className="competitive-subtitle">Problem solving across multiple platforms</p>
+      </div>
+
       <div className="cc-grid">
         {links.length === 0 ? (
-          <div className="cc-card">
+          <div className="cc-card empty-card">
+            <div className="cc-icon"><FaCode /></div>
             <div className="cc-details">
-              <h3><FaCode /> Competitive Coding</h3>
+              <h3>Competitive Coding</h3>
               <p>Profiles coming soon. Add your handles in <code>src/data/social.ts</code>.</p>
             </div>
           </div>
         ) : (
-          links.map((link) => (
-            <a key={link.label} className="cc-card" href={link.href} target="_blank" rel="noreferrer">
-              {logo(link.label) && <img className="cc-logo" src={logo(link.label)} alt={link.label} />}
-              <div className="cc-details">
-                <h3>{link.label}</h3>
-                <p>Visit my {link.label} profile.</p>
+          links.map((link, index) => (
+            <a 
+              key={link.label} 
+              className="cc-card tilt-card" 
+              href={link.href} 
+              target="_blank" 
+              rel="noreferrer"
+              style={{ '--platform-color': getColor(link.label), '--delay': `${index * 0.15}s` } as React.CSSProperties}
+            >
+              <div className="cc-card-inner">
+                <div className="cc-icon" style={{ color: getColor(link.label) }}>
+                  {getIcon(link.label)}
+                </div>
+                <div className="cc-details">
+                  <h3>{link.label}</h3>
+                  <p>View my {link.label} profile</p>
+                  <div className="platform-badge">
+                    <FaMedal /> Active
+                  </div>
+                </div>
+                <div className="card-shine"></div>
               </div>
             </a>
           ))
