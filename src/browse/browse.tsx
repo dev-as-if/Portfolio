@@ -42,7 +42,7 @@ const Browse: React.FC = () => {
       <p className='who-is-watching'>Who's Watching?</p>
       <div className="profiles">
         {profiles.map((profile, index) => (
-          <ProfileCard
+          <ProfileCard  
             key={index}
             name={profile.name}
             image={profile.image}
