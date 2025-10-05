@@ -7,6 +7,7 @@ import redImage from '../images/red.jpg';
 import yellowImage from '../images/yellow.jpg';
 import Coder from '../images/_.gif';
 import Stranger from '../images/stranger.gif';
+import TomCruise from '../images/TomCruise.gif';
 import './browse.css';
 
 const Browse: React.FC = () => {
@@ -31,7 +32,7 @@ const Browse: React.FC = () => {
     {
       name: "adventurer",
       image: yellowImage,
-      backgroundGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxib24ycWo2cjlmazh0NGV5NTZ2Mzd2YWY0M2tvam9oYXBwYW1ocCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ERKMnDK6tkzJe8YVa3/giphy-downsized-large.gif" // Dark ocean waves at night
+      backgroundGif: `${TomCruise}` // Dark ocean waves at night
     },
   ];
 

@@ -5,6 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+// Suppress ResizeObserver loop error (benign warning in development)
+const resizeObserverErrorHandler = (e: ErrorEvent) => {
+  if (e.message === 'ResizeObserver loop completed with undelivered notifications.') {
+    e.stopImmediatePropagation();
+    return;
+  }
+};
+
+window.addEventListener('error', resizeObserverErrorHandler);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

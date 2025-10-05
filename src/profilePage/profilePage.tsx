@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import './ProfilePage.css';
+import Hacker from '../images/_.gif'
 
 import ProfileBanner from './ProfileBanner';
 import TopPicksRow from './TopPicksRow';
@@ -9,7 +10,7 @@ type ProfileType = 'recruiter' | 'developer' | 'student' | 'adventurer';
 
 const ProfilePage: React.FC = () => {
   const location = useLocation();
-  const backgroundGif = location.state?.backgroundGif || "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"; // Default GIF
+  const backgroundGif = location.state?.backgroundGif || `${Hacker}`; // Default GIF
   const { profileName } = useParams<{ profileName: string }>();
 
   const profile = ['recruiter', 'developer', 'student', 'adventurer'].includes(profileName!)
