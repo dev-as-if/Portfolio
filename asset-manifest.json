@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.36180f06.css",
+    "main.js": "/Portfolio/static/js/main.f7fa9553.js",
+    "static/js/453.b0cd7502.chunk.js": "/Portfolio/static/js/453.b0cd7502.chunk.js",
+    "static/media/TomCruise.gif": "/Portfolio/static/media/TomCruise.32a2fce69c8d04f4347e.gif",
+    "static/media/stranger.gif": "/Portfolio/static/media/stranger.04e72d8f49e0d9266184.gif",
+    "static/media/mindhunter.jpg": "/Portfolio/static/media/mindhunter.71ec5414d150bac53923.jpg",
+    "static/media/_.gif": "/Portfolio/static/media/_.fbc87b4844798559bf2e.gif",
+    "static/media/peakyblinder.jpg": "/Portfolio/static/media/peakyblinder.adcf2950d97b7f8be29a.jpg",
+    "static/media/moneyheist.jpg": "/Portfolio/static/media/moneyheist.d7b8bc3aa91b49307a13.jpg",
+    "static/media/blue.jpg": "/Portfolio/static/media/blue.6911e350e4f9f247cc1e.jpg",
+    "static/media/2.png": "/Portfolio/static/media/2.7e1bb7538b1e14c37db8.png",
+    "static/media/daredevil3.jpg": "/Portfolio/static/media/daredevil3.8c710a1c5dea5534c92b.jpg",
+    "static/media/3.png": "/Portfolio/static/media/3.8e509a2b882b5429c1b0.png",
+    "static/media/yellow.jpg": "/Portfolio/static/media/yellow.d3b2314b9e937a39d958.jpg",
+    "static/media/witcher.jpg": "/Portfolio/static/media/witcher.c5b0538e24d9ced4fec2.jpg",
+    "static/media/netflix-sound.mp3": "/Portfolio/static/media/netflix-sound.a13a4aedfb5da5a27f04.mp3",
+    "static/media/Adolescence.webp": "/Portfolio/static/media/Adolescence.26edfdd0e84a3d7b5fa2.webp",
+    "static/media/red.jpg": "/Portfolio/static/media/red.6dcb96e44b60381febea.jpg",
+    "static/media/1.png": "/Portfolio/static/media/1.9681165988577685bf2c.png",
+    "static/media/BetterCallSaul.jpg": "/Portfolio/static/media/BetterCallSaul.ddd52b577aaa896c79a5.jpg",
+    "static/media/profile.jpg": "/Portfolio/static/media/profile.f6a75b2a3a90211000c4.jpg",
+    "static/media/logo-2.png": "/Portfolio/static/media/logo-2.29937c5864afe26d63cf.png",
+    "static/media/grey.jpg": "/Portfolio/static/media/grey.1dcea38e3f159959e0c0.jpg",
+    "static/media/daredevil1.jpg": "/Portfolio/static/media/daredevil1.79949933aaa30e72dc4f.jpg",
+    "static/media/daredevil2.jpeg": "/Portfolio/static/media/daredevil2.7ce81c8192449ed087b3.jpeg",
+    "static/media/dark.jpg": "/Portfolio/static/media/dark.623496b4c07f3f254b4c.jpg",
+    "static/media/strangerthings.jpeg": "/Portfolio/static/media/strangerthings.06fbfbb20b3c45ff40d9.jpeg",
+    "index.html": "/Portfolio/index.html",
+    "main.36180f06.css.map": "/Portfolio/static/css/main.36180f06.css.map",
+    "main.f7fa9553.js.map": "/Portfolio/static/js/main.f7fa9553.js.map",
+    "453.b0cd7502.chunk.js.map": "/Portfolio/static/js/453.b0cd7502.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36180f06.css",
+    "static/js/main.f7fa9553.js"
+  ]
+}
