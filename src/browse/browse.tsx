@@ -5,7 +5,7 @@ import blueImage from '../images/blue.jpg';
 import greyImage from '../images/grey.jpg';
 import redImage from '../images/red.jpg';
 import yellowImage from '../images/yellow.jpg';
-import Coder from '../images/_.gif';
+import Coder from '../images/Coder.gif';
 import Stranger from '../images/stranger.gif';
 import TomCruise from '../images/TomCruise.gif';
 import './browse.css';

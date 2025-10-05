@@ -22,6 +22,11 @@ Your portfolio is now configured for GitHub Pages deployment with the following 
 - Created `.github/workflows/deploy.yml` for automated deployments
 - Automatically builds and deploys on every push to main branch
 
+### 5. **Resume PDF Path Fix**
+- Updated `src/pages/Resume.tsx` to use `process.env.PUBLIC_URL` for correct base path
+- Updated `src/data/profileBanner.ts` to use `process.env.PUBLIC_URL` for resume link
+- Ensures resume.pdf loads correctly on GitHub Pages with `/Portfolio` base path
+
 ## 🚀 Deployment Methods
 
 ### Method 1: Using gh-pages (Current Setup)
@@ -146,9 +151,22 @@ After deployment, check:
 
 1. **Homepage loads:** https://dev-as-if.github.io/Portfolio/
 2. **Navigation works:** Click through all menu items
-3. **Direct URLs work:** Try accessing routes directly
-4. **Mobile responsive:** Test on mobile devices
-5. **Console errors:** Check browser console for errors
+3. **Resume PDF loads:** https://dev-as-if.github.io/Portfolio/#/resume
+   - PDF should display in iframe
+   - "View PDF" and "Download" buttons should work
+4. **Direct URLs work:** Try accessing routes directly
+5. **Mobile responsive:** Test on mobile devices
+6. **Console errors:** Check browser console for errors
+
+### Resume PDF Troubleshooting
+
+If resume.pdf doesn't load:
+
+1. **Verify file exists:** Check that `public/resume.pdf` exists in your project
+2. **Check build output:** After `npm run build`, verify `build/resume.pdf` exists
+3. **Test locally:** Run `npm start` and check http://localhost:3000/#/resume
+4. **Browser console:** Check for 404 errors on the PDF file
+5. **Path verification:** The PDF should be at `https://dev-as-if.github.io/Portfolio/resume.pdf`
 
 ## 🎯 Next Steps
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import './ProfilePage.css';
-import Hacker from '../images/_.gif'
+import Hacker from '../images/Coder.gif'
 
 import ProfileBanner from './ProfileBanner';
 import TopPicksRow from './TopPicksRow';
