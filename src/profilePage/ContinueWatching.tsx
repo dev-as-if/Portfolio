@@ -24,12 +24,12 @@ const continueWatchingConfig = {
   ],
   developer: [
     { title: "Development", imgSrc: `${Witcher}`, link: "/development" },
-    { title: "Skills", imgSrc: `${Daredevil2}`, link: "/certifications" },
+    { title: "Skills", imgSrc: `${Daredevil2}`, link: "/skills" },
     { title: "Project", imgSrc: `${MoneyHeist}`, link: "/contact-me" },
     { title: "Blogs", imgSrc: `${StrangerThings}`, link: "/blogs" },
   ],
   student: [
-    { title: "Skills", imgSrc: `${Daredevil2}`, link: "/certifications" },
+    { title: "Skills", imgSrc: `${Daredevil2}`, link: "/skills" },
     { title: "Blogs", imgSrc: `${Grey}`, link: "/blogs" },
     { title: "Contact Me", imgSrc: `${PeakyBlinders}`, link: "/contact-me" }
   ],
