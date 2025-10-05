@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.36180f06.css",
-    "main.js": "/Portfolio/static/js/main.8a74fbba.js",
+    "main.js": "/Portfolio/static/js/main.9b7f3857.js",
     "static/js/453.120fa251.chunk.js": "/Portfolio/static/js/453.120fa251.chunk.js",
     "static/media/TomCruise.gif": "/Portfolio/static/media/TomCruise.32a2fce69c8d04f4347e.gif",
     "static/media/stranger.gif": "/Portfolio/static/media/stranger.04e72d8f49e0d9266184.gif",
     "static/media/mindhunter.jpg": "/Portfolio/static/media/mindhunter.71ec5414d150bac53923.jpg",
-    "static/media/_.gif": "/Portfolio/static/media/_.fbc87b4844798559bf2e.gif",
+    "static/media/Coder.gif": "/Portfolio/static/media/Coder.fbc87b4844798559bf2e.gif",
     "static/media/peakyblinder.jpg": "/Portfolio/static/media/peakyblinder.adcf2950d97b7f8be29a.jpg",
     "static/media/moneyheist.jpg": "/Portfolio/static/media/moneyheist.d7b8bc3aa91b49307a13.jpg",
     "static/media/blue.jpg": "/Portfolio/static/media/blue.6911e350e4f9f247cc1e.jpg",
@@ -29,11 +29,11 @@
     "static/media/strangerthings.jpeg": "/Portfolio/static/media/strangerthings.06fbfbb20b3c45ff40d9.jpeg",
     "index.html": "/Portfolio/index.html",
     "main.36180f06.css.map": "/Portfolio/static/css/main.36180f06.css.map",
-    "main.8a74fbba.js.map": "/Portfolio/static/js/main.8a74fbba.js.map",
+    "main.9b7f3857.js.map": "/Portfolio/static/js/main.9b7f3857.js.map",
     "453.120fa251.chunk.js.map": "/Portfolio/static/js/453.120fa251.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36180f06.css",
-    "static/js/main.8a74fbba.js"
+    "static/js/main.9b7f3857.js"
   ]
 }
